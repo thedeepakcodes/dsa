@@ -10,7 +10,9 @@
 - If match -> return index
 - If end reached -> return -1
 
-#### Code
+### Code
+
+#### Using Arrays
 
 ```cpp
 int linearSearch(int arr[], int size, int target) {
@@ -24,7 +26,29 @@ int linearSearch(int arr[], int size, int target) {
 }
 ```
 
+#### Using Vectors
+
+```cpp
+int linearSearch(const vector<int>& v, int target) {
+  int i = 0;
+  for (int val : v) {
+    if (target == val) {
+      return i;
+    }
+
+    i++;
+  }
+
+  return -1;
+}
+```
+
 ### Disadvantages
 
 - Slow for large datasets
 - Not efficient compared to Binary Search
+
+### Complexity
+
+- Time Complexity: $O(n)$
+- Space Complexity: $O(1)$
